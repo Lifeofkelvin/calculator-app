@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 700;
+    /* color: hsl(221, 14%, 31%); */
+}
+
+:root {
+    --main-bg-color: hsl(222, 26%, 31%);
+    --main-bg1-color: hsl(0, 0%, 90%);
+	--main-bg2-color: hsl(268, 75%, 9%);
+	--two-tk-bg: hsl(0, 5%, 81%);
+	--tbgkbgsbg: hsl(268, 71%, 12%);
+}
+
+body {
+    min-height: 100vh;
+    font-family: "League Spartan", sans-serif;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-bg-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+}
+
+body.active1 {
+    background-color: var(--main-bg1-color);
+}
+body.active1 .btn {
+    background-color: var(--two-tk-bg);
+}
+
+body.active2 {
+    background-color: var(--main-bg2-color);
+}
+
+.title {
+    width: 100%;
+}
+
+.toggle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.toggle p{
+    margin: 0 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+body.active1 .toggle h3 {
+    color: #111;
+}
+
+body.active2 .toggle h3 {
+    color: hsl(52, 100%, 62%);
+}
+
+h3 {
+    color: #fff;
+}
+
+.control {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.control .box {
+    width: 60px;
+    height: 15px;
+    background-color: hsl(244, 36%, 15%);
+    border-radius: 30px;
+    margin-left: 5px;
+    position: relative;
+}
+
+body.active1 .control .box {
+    background-color: var(--two-tk-bg);
+}
+
+body.active2 .control #circle {
+    background-color: hsl(176, 100%, 44%);
+}
+
+.control #circle {
+    width: 13px;
+    height: 13px;
+    background-color: hsl(6, 63%, 50%);
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    z-index: 1;
+    border-radius: 30px;
+}
+
+body.active1 .control #circle {
+    background-color: hsl(25, 98%, 40%);
+}
+
+.control p {
+    color: #fff;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+body.active1 .control p {
+    color: #111;
+}
+
+body.active1 .right p {
+    color: #111;
+}
+
+body.active2 .control p {
+    color: hsl(52, 100%, 62%);
+}
+
+body.active2 .right p {
+    color: hsl(52, 100%, 62%);
+}
+
+.screen {
+    width: 450px;
+}
+
+#screen {
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+    text-align: right;
+    font-size: 32px;
+    background-color: hsl(224, 36%, 15%);
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+body.active1 #screen {
+    background-color: hsl(0, 0%, 93%);
+    color: #111;
+}
+
+body.active2 #screen {
+    background-color: var(--tbgkbgsbg);
+    color: hsl(52, 16%, 65%);
+}
+
+button {
+    width: 90px;
+    padding: 15px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 00px 3px 0px 0px hsl(28, 16%, 65%);
+    margin: 10px 10px;
+    font-size: 32px;
+}
+
+body.active1 button {
+    box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+}
+
+body.active2 button {
+    box-shadow: 0px 3px 0px 0px hsl(268, 47%, 21%);
+    background-color: hsl(290, 70%, 36%);
+    color: hsl(52, 100%, 62%);
+}
+
+.btn {
+    display: flex;
+    width: 450px;
+    flex-wrap: wrap;
+    background-color: hsl(224, 36%, 15%);
+    padding: 10px 5px;
+    margin: 8px 0;
+    border-radius: 15px;
+}
+
+body.active2 .btn {
+    background-color: var(--tbgkbgsbg);
+}
+
+.reset,.del {
+    box-shadow: 0px 3px 0px 0px hsl(224, 28%, 35%);
+    background-color: hsl(225, 21%, 49%);
+    color: #fff;
+    font-size: 16px;
+}
+
+body.active1 .reset, body.active1 .del {
+    box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+    background-color: hsl(185, 42%, 37%);
+}
+
+body.active2 .reset, body.active2 .del {
+    box-shadow: 0px 3px 0px 0px hsl(290, 70%, 36%);
+    background-color: hsl(268, 47%, 21%);
+    color: #fff;
+}
+
+.reset,.equal {
+    width: 200px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.equal {
+    box-shadow: 0px 3px 0px 0px hsl(6, 70%, 34%);
+    background-color: hsl(6, 63%, 50%);
+}
+
+body.active1 .equal {
+    box-shadow: 0px 3px 0px 0px hsl(25, 99%, 27%);
+    background-color: hsl(25, 98%, 40%);
+}
+
+body.active2 .equal {
+    box-shadow: hsl(177, 92%, 70%);
+    background-color: hsl(176, 100%, 44%);
+    color: #fff;
+}
+
+.num {
+
+} 
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 300px;
+    }
+
+    .screen {
+       display: flex;
+       align-items: center; 
+       width: 100%;
+    }
+
+    .calc-body {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        place-content: center;
+    }
+
+    button {
+        width: 50px;
+        text-align: center;
+    }
+
+    .reset,.equal {
+        width: 120px;
+    }
+   
+}
